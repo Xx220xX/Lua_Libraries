@@ -1,1 +1,0 @@
-http://luajit.org/ext_ffi_api.html
