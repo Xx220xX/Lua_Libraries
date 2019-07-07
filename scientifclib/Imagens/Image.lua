@@ -22,7 +22,7 @@ end
 local function saveasppm(t,name)
     name =name..'.ppm'
    local file = io.open(name,'w')
-  --print(file)
+  
  if file==nil then return "falha na abertura do arquivo" end
    t.saved=name..'ppm'
    file.write("P3\n".. t.sw,t.sh,'255\n')
@@ -47,5 +47,5 @@ Imagem.save= function(t,name,format)
 return "ERRO:formato desconhecido"
 end
 
-return Image
+return Imagem
 
