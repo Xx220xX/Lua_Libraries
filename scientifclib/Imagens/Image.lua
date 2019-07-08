@@ -49,7 +49,7 @@ Image.new = function(altura, largura, undergroundColor, tipoDecor)
     end
     return setmetatable({ m = mat, sh = altura, sw = largura, typeColor = tipodeCor or "UNDEFINED" }, Image)
 end
-Image.is_Imagem = function(v)
+Image.is_image = function(v)
     return getmetatable(v) == Image
 end
 
