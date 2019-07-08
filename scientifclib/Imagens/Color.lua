@@ -27,6 +27,7 @@ Color.yellow = Color.new("RGB",255,255,0)
 Color.red = Color.new("RGB",255)
 Color.cyan = Color.new("RGB",0,255,255)
 Color.white = Color.new("RGB",255,255,255)
+Color.black = Color.new("RGB",0,0,0)
 
 return Color
 

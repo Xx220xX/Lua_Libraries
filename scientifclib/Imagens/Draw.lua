@@ -6,6 +6,7 @@
 --
 local Draw = {}
 local Cor = require('Color')
+local mathSci = require('mathSci')
 local floor = math.floor
 local modulo = function(v) return v < 0 and -v or v end
 local function positiveOr0(m) return m < 0 and 0 or m end
@@ -41,16 +42,17 @@ Draw.circle = function(im, color, icenter, jcenter, radius, thickness)
         end
     end
 end
-Draw.FUNCTION_X = function(im, color, thickness, FUNCTION,icenter,jcenter,scalei,scalej)
+Draw.FUNCTION_X = function(im, color, thickness, FUNCTION, xi, xf, yi, yf)
     if not (im and im.is_image and im:is_image()) then
         error("variavel passada nao é uma imagem")
         return
     end
-    thickness = 2* (thickness < 0 and -thickness or thickness)*(scalei*scalej)^0.5
+    thickness = modulo(thickness)
+
     local result
     for i = 1, im.sh do
         for j = 1, im.sw do
-            result = modulo(i*scalei-icenter - FUNCTION(scalej*(j-jcenter)))
+            result = modulo(mathSci.map(i,  im.sh,1, yi, yf)  - FUNCTION( mathSci.map(j , 1, im.sw,xi,xf)) )
             if result <= thickness then
                 im.m[i][j] = color
             end
