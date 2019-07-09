@@ -94,4 +94,4 @@ Draw.FUNCTIONS = function(im, color, thickness, xi, xf, yi, yf, ...)
         end
     end
 end
-
+return Draw
