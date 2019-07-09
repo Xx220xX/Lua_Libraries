@@ -9,8 +9,8 @@
 local complex = {}
 complex.new = function(a, b)
     if type(a) == 'number' and type(b) == 'number' then
-        a = math.abs(a) < 10^-14 and 0 or a
-        b = math.abs(b) < 10^-14 and 0 or b
+        a = math.abs(a) < 10 ^ -14 and 0 or a
+        b = math.abs(b) < 10 ^ -14 and 0 or b
         return setmetatable({ re = a, im = b }, complex);
     end
     return nil
@@ -85,8 +85,8 @@ complex.__le = function(x, y) error("complex numbers are not comparable") end
 -- tostring()
 complex.__tostring = function(x)
     local r = ''
-    if tostring(x.re) == 'nan'  or tostring(x.im) == 'nan' then return 'nan' end
-    if x.re ~= 0 then r = tostring(x.re) end
+    if complex.isnan(x) then return 'nan' end
+    if x.re ~= 0 then r = tostring(x.re) elseif x.im == 0 then return '0' end
     if x.im == 0 then return r end
     if x.im < 0 then r = r .. ' - ' end
     if x.im > 0 and x.re ~= 0 then r = r .. ' + ' end
@@ -126,7 +126,7 @@ end
 complex.log = function(z, raiz)
     z = complex.tocomplex(z)
     raiz = raiz or 0
-  return  math.log(complex.abs(z)) + complex.new(0,z:arg() + 2 * raiz * math.pi)
+    return math.log(complex.abs(z)) + complex.new(0, z:arg() + 2 * raiz * math.pi)
 end
 
 -- Exponent
@@ -145,13 +145,16 @@ end
 complex.pow = function(c1, c2)
     local w = c2 * complex.log(c1)
     w = complex.exp(w)
-    if math.abs(w.im) < 10^-14 then w.im = 0 end
+    if math.abs(w.im) < 10 ^ -14 then w.im = 0 end
     return w;
+end
+complex.isnan = function(x)
+    x =  complex.tocomplex(x)
+    return tostring(x.re) == 'nan' or tostring(x.im) == 'nan'
 end
 
 
 
-
-complex.i = complex.new(0,1)
+complex.i = complex.new(0, 1)
 
 return complex
