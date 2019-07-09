@@ -15,7 +15,8 @@ print(CALCULO.trapezio(0, 2, f, 10))
 print(CALCULO.simpson(0, 2, f, 10))
 
 for i = 0, 20 do
-    r = CALCULO.derivadan(f, 0, i, 1, 1000)
+    
+    r = CALCULO.derivadan(--[[ function]] f, --[[ponto]]0, --[[numero de ordem ]] i, --[[raio ]] 1,--[[divisoes]] 1000)
     print("f(0)[" .. i .. "] = " .. r)
 end
 --[[ output
