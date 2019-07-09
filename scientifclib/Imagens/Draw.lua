@@ -5,7 +5,6 @@
 -- Time: 11:32
 --
 local Draw = {}
-local Cor = require('Color')
 local mathSci = require('mathSci')
 local floor = math.floor
 local modulo = function(v) return v < 0 and -v or v end
@@ -48,15 +47,51 @@ Draw.FUNCTION_X = function(im, color, thickness, FUNCTION, xi, xf, yi, yf)
         return
     end
     thickness = modulo(thickness)
-
     local result
     for i = 1, im.sh do
         for j = 1, im.sw do
-            result = modulo(mathSci.map(i,  im.sh,1, yi, yf)  - FUNCTION( mathSci.map(j , 1, im.sw,xi,xf)) )
+            result = modulo(mathSci.map(i, im.sh, 1, yi, yf) - FUNCTION(mathSci.map(j, 1, im.sw, xi, xf)))
             if result <= thickness then
                 im.m[i][j] = color
             end
         end
     end
 end
-return Draw
+Draw.FUNCTION_XY = function(im, color, thickness, FUNCTION, xi, xf, yi, yf)
+    if not (im and im.is_image and im:is_image()) then
+        error("variavel passada nao é uma imagem")
+        return
+    end
+    thickness = modulo(thickness)
+    local result
+    for i = 1, im.sh do
+        for j = 1, im.sw do
+            result = modulo(FUNCTION(mathSci.map(j, 1, im.sw, xi, xf), mathSci.map(i, im.sh, 1, yi, yf)))
+            if result <= thickness then
+                im.m[i][j] = color
+            end
+        end
+    end
+end
+Draw.FUNCTIONS = function(im, color, thickness, xi, xf, yi, yf, ...)
+    if not (im and im.is_image and im:is_image()) then
+        error("variavel passada nao é uma imagem")
+        return
+    end
+    local FUNCTION = { ... }
+    thickness = modulo(thickness)
+
+    local result
+    for i = 1, im.sh do
+        for j = 1, im.sw do
+
+            for k, v in pairs(FUNCTION) do
+                result = modulo(v(mathSci.map(j, 1, im.sw, xi, xf), mathSci.map(i, im.sh, 1, yi, yf)))
+                if result <= thickness then
+                    im.m[i][j] = color
+                end
+            end
+        end
+    end
+end
+

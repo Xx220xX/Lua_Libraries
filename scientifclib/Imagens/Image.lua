@@ -38,16 +38,16 @@ local Cor = require('Color')
 local Image = {}
 Image.__index = Image
 
-Image.new = function(altura, largura, undergroundColor, tipoDecor)
+Image.new = function(altura_px, largura_px,altura_cm,largura_cm, backgroundColor, tipoDecor)
     local mat = {}
 
-    for ii = 1, altura do
+    for ii = 1, altura_px do
         mat[ii] = {}
-        for jj = 1, largura do
-            mat[ii][jj] = undergroundColor
+        for jj = 1, largura_px do
+            mat[ii][jj] = backgroundColor
         end
     end
-    return setmetatable({ m = mat, sh = altura, sw = largura, typeColor = tipodeCor or "UNDEFINED" }, Image)
+    return setmetatable({ m = mat, sh = altura_px, sw = largura_px ,ddp=altura_px/altura_cm*largura_px/largura_cm, typeColor = tipoDecor or "UNDEFINED" }, Image)
 end
 Image.is_image = function(v)
     return getmetatable(v) == Image
@@ -72,6 +72,7 @@ local function saveasppm(t, name)
     for ii = 1, t.sh do
         for jj = 1, t.sw do
             if (t.m[ii][jj] == nil) then t.m[i][j] = { r = 0, g = 0, b = 0 } end
+            if (jj)%500==0 then file:write('\n') end
             file:write(string.format('% 3d % 3d % 3d ',
                 t.m[ii][jj].r, t.m[ii][jj].g,
                 t.m[ii][jj].b))

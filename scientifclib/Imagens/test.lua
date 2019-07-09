@@ -8,31 +8,34 @@ Image = require('Image')
 Cor = require('Color')
 Draw = require('Draw')
 amarelo = Cor.new('RGB', 255, 0, 0)
-im = Image.new(1000, 1000, Cor.white, 'RGB')
+im = Image.new(1080, 1080,25,25, Cor.white, 'RGB')
 --print(amarelo)
 --print(im)
 
 --Draw.circle(im,Cor.blue,im.sh/2,im.sw/2,(im.sh+im.sw)/20,(im.sh+im.sw)/600)
-Draw.FUNCTION_X(im,
-    --[[cor]] Cor.cyan,
-    --[[espessura ]] 0.05,
-    --[[f(x) =  y]] math.sin,
-    --[[xi limite]] -10,
-    --[[xi limite]] 10,
-    --[[yi limite]] -3,
-    --[[yi limite]] 3)
-local function f(x)
-    return 0
-end
-Draw.FUNCTION_X(im,
-    --[[cor]] Cor.black,
-    --[[espessura ]] 0.01,
-    --[[f(x) =  y]] f,
-    --[[xi limite]] -10,
-    --[[xi limite]] 10,
-    --[[yi limite]] -3,
-    --[[yi limite]] 3)
 
+local function f(x,y)
+    return x
+end
+
+local function f1(x, y)
+    return y
+end
+
+local function f2(x,y)
+    return 30*x^3-x^2+0.00013 - y
+end
+
+Draw.FUNCTION2(im,
+    --[[cor]] Cor.black,
+    --[[espessura (0~100)]] 1,
+    --[[xi limite]] -1,
+    --[[xf limite]] 1,
+    --[[yi limite]] -1,
+    --[[yf limite]] 1,
+    --[[f1(x,y) =  0 ...]] f,
+    --[[f1(x,y) =  0 ...]] f1,
+    --[[f1(x,y) =  0 ...]] f2)
 
 print(im:save("minhafototo", "ppm"))
 print(im.saved)
