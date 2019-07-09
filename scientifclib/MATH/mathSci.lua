@@ -30,7 +30,7 @@ end
 
 -- e^x
 function mathSci.exp(z)
-   return mathSci.complex.exp(z)
+    return mathSci.complex.exp(z)
 end
 
 -- raiz(z)
@@ -99,7 +99,18 @@ function mathSci.atanh(x)
     return (0.5 * mathSci.log((1 + x) / (1 - x)))
 end
 
+function mathSci.fat(n)
+    n = mathSci.floor(n)
+    if n < 0 then error(" the factorial of a negative number was required") end
+    local r = 1;
+    while n > 1 do
+        r =r* n
+        n =n - 1
+    end
+    return r
+end
 
+function mathSci.isnan(x) return mathSci.complex.isnan(x) end
 
 
 
