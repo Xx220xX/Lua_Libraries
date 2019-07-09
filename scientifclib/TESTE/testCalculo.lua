@@ -4,8 +4,8 @@
 -- Date: 09/07/2019
 -- Time: 20:22
 --
-CALCULO = require('Calculo')
-mathSci = require('mathSci')
+CALCULO = require('../MATH/Calculo')
+mathSci = require('../MATH/mathSci')
 function f(x)
     return mathSci.sin(x)
 end
