@@ -1,5 +1,5 @@
 # lua to java http://luajit.org/ext_ffi_api.html
-# lua operadores https://www.xtibia.com/forum/topic/196219-lua-mega-tutorial-de-oop-avan%C3%A7ado/
+# lua operators https://www.xtibia.com/forum/topic/196219-lua-mega-tutorial-de-oop-avan%C3%A7ado/
 #  To make a mathematical library for evolutionary algorithms
 # 1 - operations with complex numbers -- This works already
 # 2 - integration and numerically derived -- This works already
