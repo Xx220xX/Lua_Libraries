@@ -3,6 +3,7 @@
 https://www.xtibia.com/forum/topic/196219-lua-mega-tutorial-de-oop-avan%C3%A7ado/
 #  To make a mathematical library for evolutionary algorithms
 # 1 - operations with complex numbers -- This works already
+  tables to define complex numbers that support the operations sum, difference, multiplication, division, power, conjugate, absolute. With a module called mathSci with common functions, all for complex numbers.
 # 2 - integration and numerically derived -- This works already
 # 3 - Numerical Methods for Differential Equations -- NEXT STEP
 # 4 - matrix and vector operations -- a future step
