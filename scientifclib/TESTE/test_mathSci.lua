@@ -1,4 +1,5 @@
-sci = require('../MATH/mathSci')
+
+sci = require('scientifclib.MATH.mathSci')
 i = sci.complex.i
 
 function test(s,f,...)

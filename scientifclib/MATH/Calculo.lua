@@ -7,7 +7,7 @@
 --- [[ funcoes para calcular integral pelos metodos dos trapezios e 1/3 de simpson]]
 
 local CALCULO = {}
-local mathsci = require('mathSci')
+local mathsci = require('scientifclib.MATH.mathSci')
 CALCULO.__index = CALCULO
 -- FUNCTION = f(x)
 CALCULO.trapezio = function(a, b, FUNCTION, N)
@@ -30,7 +30,7 @@ end
 CALCULO.simpson = function(a, b, FUNCTION, N)
     N = math.abs(N)
     local fator = 1
-    local erro = 'OK'
+    local erro = ''
     if b < a then
         a, b = b, a
         fator = -fator

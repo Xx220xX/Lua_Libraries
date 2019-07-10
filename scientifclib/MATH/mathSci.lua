@@ -5,7 +5,7 @@
 -- Time: 21:37
 
 local mathSci = {}
-mathSci.complex = require("complex")
+mathSci.complex = require("scientifclib.MATH.complex")
 mathSci.__index = mathSci
 mathSci.floor = math.floor
 
