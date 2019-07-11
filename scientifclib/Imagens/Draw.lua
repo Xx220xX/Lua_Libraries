@@ -5,7 +5,7 @@
 -- Time: 11:32
 --
 local Draw = {}
-local mathSci = require('mathSci')
+local mathSci = require('scientifclib.MATH.mathSci')
 local floor = math.floor
 local modulo = function(v) return v < 0 and -v or v end
 local function positiveOr0(m) return m < 0 and 0 or m end
@@ -47,6 +47,8 @@ Draw.FUNCTION_X = function(im, color, thickness, FUNCTION, xi, xf, yi, yf)
         return
     end
     thickness = modulo(thickness)
+
+
     local result
     for i = 1, im.sh do
         for j = 1, im.sw do
@@ -94,4 +96,29 @@ Draw.FUNCTIONS = function(im, color, thickness, xi, xf, yi, yf, ...)
         end
     end
 end
+Draw.entorno = function(im,i,j,color,pix)
+    for ii = i-pix,i+pix do
+        for jj = j-pix,j+pix do
+            im:pixel(ii,jj,color)
+        end
+    end
+end
+
+Draw.plot = function(im, color, thickness, FUNCTION, xi, xf, yi, yf)
+
+    if not (im and im.is_image and im:is_image()) then
+        error("variavel passada nao é uma imagem")
+        return
+    end
+    thickness = modulo(thickness)
+    local i,x,y;
+    for j = 1, im.sw do
+        x = mathSci.map(j,1,im.sw,xi,xf)
+        y = FUNCTION(x)
+        i = floor(mathSci.map(-y,yi,yf,1,im.sh))
+        Draw.entorno(im,i,j,color,thickness);
+    end
+end
+
 return Draw
+
