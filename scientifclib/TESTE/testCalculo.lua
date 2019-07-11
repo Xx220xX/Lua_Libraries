@@ -7,40 +7,14 @@
 CALCULO = require('scientifclib.MATH.Calculo')
 mathSci = require('scientifclib.MATH.mathSci')
 function f(x)
-    return mathSci.sin(x)
+    return mathSci.exp(x^2)
 end
 
+print('integral de  0  a 2 \n     Regra dos trapezios '..(CALCULO.trapezio(0, 2, f, 10)))
+print('     1/3 de Simpson '..CALCULO.simpson(0, 2, f, 10))
 
-print(CALCULO.trapezio(0, 2, f, 10))
-print(CALCULO.simpson(0, 2, f, 10))
+for i = 0, 30 do
 
-for i = 0, 20 do
-    
-    r = CALCULO.derivadan(--[[ function]] f, --[[ponto]]0, --[[numero de ordem ]] i, --[[raio ]] 1,--[[divisoes]] 1000)
-    print("f(0)[" .. i .. "] = " .. r)
+    r = CALCULO.derivada_n(--[[ function]] f, --[[ponto]]2, --[[numero de ordem ]] i, --[[raio ]] 1, --[[divisoes]] 1000)
+    print("     derivada de ordem "..i..": f(2) = " .. r )
 end
---[[ output
-1.4114232
-1.4161595
-f(0)[0] = 0
-f(0)[1] = 1.0
-f(0)[2] = 0
-f(0)[3] = -1
-f(0)[4] = 0
-f(0)[5] = 1.0
-f(0)[6] = 0
-f(0)[7] = -1.0
-f(0)[8] = 0
-f(0)[9] = 1.0
-f(0)[10] = 0
-f(0)[11] = -1.0
-f(0)[12] = 0
-f(0)[13] = 1.0000002
-f(0)[14] = 0
-f(0)[15] = -0.99991566
-f(0)[16] = 0
-f(0)[17] = 1.0036584
-f(0)[18] = 0
-f(0)[19] = 0
-f(0)[20] = 0
-]]
