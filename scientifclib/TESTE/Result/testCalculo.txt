@@ -1,0 +1,182 @@
+
+--[[ output for f(x) = sin(x)
+integral de  0  a 2
+     Regra dos trapezios 1.4114231970989
+     1/3 de Simpson 1.4161594847145
+     derivada de ordem 0: f(pi/2) = 1.0
+     derivada de ordem 1: f(pi/2) = 0
+     derivada de ordem 2: f(pi/2) = -1.0
+     derivada de ordem 3: f(pi/2) = 0
+     derivada de ordem 4: f(pi/2) = 1.0
+     derivada de ordem 5: f(pi/2) = 0
+     derivada de ordem 6: f(pi/2) = -0.99999999999997
+     derivada de ordem 7: f(pi/2) = 0
+     derivada de ordem 8: f(pi/2) = 1.0000000000018
+     derivada de ordem 9: f(pi/2) = 0
+     derivada de ordem 10: f(pi/2) = -0.99999999986029
+     derivada de ordem 11: f(pi/2) = 0
+     derivada de ordem 12: f(pi/2) = 1.0000000262574
+     derivada de ordem 13: f(pi/2) = 0
+     derivada de ordem 14: f(pi/2) = -1.0000006917147
+     derivada de ordem 15: f(pi/2) = 0
+     derivada de ordem 16: f(pi/2) = 1.0002608302912
+     derivada de ordem 17: f(pi/2) = 0
+     derivada de ordem 18: f(pi/2) = 0
+     derivada de ordem 19: f(pi/2) = 0
+     derivada de ordem 20: f(pi/2) = 0
+     derivada de ordem 21: f(pi/2) = 0
+     derivada de ordem 22: f(pi/2) = 0
+     derivada de ordem 23: f(pi/2) = 0
+     derivada de ordem 24: f(pi/2) = 0
+     derivada de ordem 25: f(pi/2) = 0
+     derivada de ordem 26: f(pi/2) = 0
+     derivada de ordem 27: f(pi/2) = 0
+     derivada de ordem 28: f(pi/2) = 0
+     derivada de ordem 29: f(pi/2) = 0
+     derivada de ordem 30: f(pi/2) = 0
+]]
+--[[ output for f(x) = tan(x)
+integral de  0  a 2
+     Regra dos trapezios -5.4689185319826
+     1/3 de Simpson -3.1184954734071
+     derivada de ordem 0: f(pi/2) = 0                   analiticamente  = +/- inf
+     derivada de ordem 1: f(pi/2) = 0.33333333333333    analiticamente  = +/- inf
+     derivada de ordem 2: f(pi/2) = 0                   analiticamente  = +/- inf
+     derivada de ordem 3: f(pi/2) = 0.13333333333333    analiticamente  = +/- inf
+     derivada de ordem 4: f(pi/2) = 0                   analiticamente  = +/- inf
+     derivada de ordem 5: f(pi/2) = 0.25396825396826    analiticamente  = +/- inf
+     derivada de ordem 6: f(pi/2) = 0                   analiticamente  = +/- inf
+     derivada de ordem 7: f(pi/2) = 1.0666666666668     analiticamente  = +/- inf
+     derivada de ordem 8: f(pi/2) = 0                   analiticamente  = +/- inf
+     derivada de ordem 9: f(pi/2) = 7.7575757575727     analiticamente  = +/- inf
+     derivada de ordem 10: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 11: f(pi/2) = 86.396092793923    analiticamente  = +/- inf
+     derivada de ordem 12: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 13: f(pi/2) = 1365.3333333014    analiticamente  = +/- inf
+     derivada de ordem 14: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 15: f(pi/2) = 29049.474515205    analiticamente  = +/- inf
+     derivada de ordem 16: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 17: f(pi/2) = 800575.78505731    analiticamente  = +/- inf
+     derivada de ordem 18: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 19: f(pi/2) = 27741348.63091     analiticamente  = +/- inf
+     derivada de ordem 20: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 21: f(pi/2) = -98185773.805577   analiticamente  = +/- inf
+     derivada de ordem 22: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 23: f(pi/2) = 19030126.988081    analiticamente  = +/- inf
+     derivada de ordem 24: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 25: f(pi/2) = 1668973.1541269    analiticamente  = +/- inf
+     derivada de ordem 26: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 27: f(pi/2) = -131453.62998695   analiticamente  = +/- inf
+     derivada de ordem 28: f(pi/2) = 0                  analiticamente  = +/- inf
+     derivada de ordem 29: f(pi/2) = -17465.990569514   analiticamente  = +/- inf
+     derivada de ordem 30: f(pi/2) = 0                  analiticamente  = +/- inf
+]]
+--[[ output for f(x) = e^x
+integral de  0  a 2
+     Regra dos trapezios 6.4103387681996
+     1/3 de Simpson 6.3891126212354
+     derivada de ordem 0: f(pi/2) = 4.8104773809654   analiticamente  = 4.8104773809654
+     derivada de ordem 1: f(pi/2) = 4.8104773809654   analiticamente  = 4.8104773809654
+     derivada de ordem 2: f(pi/2) = 4.8104773809653   analiticamente  = 4.8104773809654
+     derivada de ordem 3: f(pi/2) = 4.8104773809654   analiticamente  = 4.8104773809654
+     derivada de ordem 4: f(pi/2) = 4.8104773809654   analiticamente  = 4.8104773809654
+     derivada de ordem 5: f(pi/2) = 4.8104773809654   analiticamente  = 4.8104773809654
+     derivada de ordem 6: f(pi/2) = 4.8104773809654   analiticamente  = 4.8104773809654
+     derivada de ordem 7: f(pi/2) = 4.8104773809664   analiticamente  = 4.8104773809654
+     derivada de ordem 8: f(pi/2) = 4.8104773809873   analiticamente  = 4.8104773809654
+     derivada de ordem 9: f(pi/2) = 4.8104773811305   analiticamente  = 4.8104773809654
+     derivada de ordem 10: f(pi/2) = 4.8104773816359  analiticamente  = 4.8104773809654
+     derivada de ordem 11: f(pi/2) = 4.810477404197   analiticamente  = 4.8104773809654
+     derivada de ordem 12: f(pi/2) = 4.8104775073423  analiticamente  = 4.8104773809654
+     derivada de ordem 13: f(pi/2) = 4.8104799896364  analiticamente  = 4.8104773809654
+     derivada de ordem 14: f(pi/2) = 4.810499383977   analiticamente  = 4.8104773809654
+     derivada de ordem 15: f(pi/2) = 4.8110155831564  analiticamente  = 4.8104773809654
+     derivada de ordem 16: f(pi/2) = 4.816956003313   analiticamente  = 4.8104773809654
+     derivada de ordem 17: f(pi/2) = 4.9181475608493  analiticamente  = 4.8104773809654
+     derivada de ordem 18: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 19: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 20: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 21: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 22: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 23: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 24: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 25: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 26: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 27: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 28: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 29: f(pi/2) = 0                analiticamente  = 4.8104773809654
+     derivada de ordem 30: f(pi/2) = 0                analiticamente  = 4.8104773809654
+
+]]
+--[[ output for f(x) = e^x * sin(x)
+integral de  0  a 2
+     Regra dos trapezios 5.4057520167559
+     1/3 de Simpson 5.3966995825425
+     derivada de ordem 0: f(pi/2) = 4.8104773809653
+     derivada de ordem 1: f(pi/2) = 4.8104773809654
+     derivada de ordem 2: f(pi/2) = 0
+     derivada de ordem 3: f(pi/2) = -9.6209547619307
+     derivada de ordem 4: f(pi/2) = -19.241909523861
+     derivada de ordem 5: f(pi/2) = -19.241909523861
+     derivada de ordem 6: f(pi/2) = 0
+     derivada de ordem 7: f(pi/2) = 38.483819047723
+     derivada de ordem 8: f(pi/2) = 76.967638095448
+     derivada de ordem 9: f(pi/2) = 76.967638095454
+     derivada de ordem 10: f(pi/2) = 0
+     derivada de ordem 11: f(pi/2) = -153.9352761801
+     derivada de ordem 12: f(pi/2) = -307.87055245351
+     derivada de ordem 13: f(pi/2) = -307.87054768575
+     derivada de ordem 14: f(pi/2) = 0
+     derivada de ordem 15: f(pi/2) = 615.74160083374
+     derivada de ordem 16: f(pi/2) = 1231.484257811
+     derivada de ordem 17: f(pi/2) = 1231.4770227633
+     derivada de ordem 18: f(pi/2) = 0
+     derivada de ordem 19: f(pi/2) = -2434.2707484811
+     derivada de ordem 20: f(pi/2) = -4557.9551711411
+     derivada de ordem 21: f(pi/2) = 0
+     derivada de ordem 22: f(pi/2) = 0
+     derivada de ordem 23: f(pi/2) = 0
+     derivada de ordem 24: f(pi/2) = 0
+     derivada de ordem 25: f(pi/2) = 0
+     derivada de ordem 26: f(pi/2) = 0
+     derivada de ordem 27: f(pi/2) = 0
+     derivada de ordem 28: f(pi/2) = 0
+     derivada de ordem 29: f(pi/2) = 0
+     derivada de ordem 30: f(pi/2) = 0
+]]
+--[[  output for f(X) = e^(x^2)
+integral de  0  a 2
+     Regra dos trapezios 17.170210145826
+     1/3 de Simpson 16.490202874513
+     derivada de ordem 0: f(2) = 54.598150033144
+     derivada de ordem 1: f(2) = 218.39260013258 + 2.0861534721917e-013*i
+     derivada de ordem 2: f(2) = 982.7667005966 + 3.12411430059e-013*i
+     derivada de ordem 3: f(2) = 4804.6372029167 - 6.3437255448662e-014*i
+     derivada de ordem 4: f(2) = 25115.149015246 + 3.8435246096924e-012*i
+     derivada de ordem 5: f(2) = 138897.69368432 + 4.0881786844693e-012*i
+     derivada de ordem 6: f(2) = 806742.26488974 - 4.1582097765058e-011*i
+     derivada de ordem 7: f(2) = 4893741.3837708 + 8.0905010690913e-010*i
+     derivada de ordem 8: f(2) = 30869357.24354 - 4.0093436837196e-009*i
+     derivada de ordem 9: f(2) = 201777291.11449 - 1.1820840882137e-007*i
+     derivada de ordem 10: f(2) = 1362757594.8417 + 7.1810645749792e-007*i
+     derivada de ordem 11: f(2) = 9486576201.6565 - 5.1098046242259e-006*i
+     derivada de ordem 12: f(2) = 67926971893.143 - 2.2327032638714e-005*i
+     derivada de ordem 13: f(2) = 499385716412.33 + 0.00081411984865554*i
+     derivada de ordem 14: f(2) = 3763644134871.0 - 0.016954458807595*i
+     derivada de ordem 15: f(2) = 29037376599029.0 + 0.086523241654504*i
+     derivada de ordem 16: f(2) = 2.2905883044225e+014 - 0.26799409557134*i
+     derivada de ordem 17: f(2) = 1.845431372938e+015 + 46.313819853589*i
+     derivada de ordem 18: f(2) = 1.516972572679e+016 + 767.65560777113*i
+     derivada de ordem 19: f(2) = 1.2711443233295e+017 + 27456.061693367*i
+     derivada de ordem 20: f(2) = 1.0849073069506e+018 - 68594.056077451*i
+     derivada de ordem 21: f(2) = -7.8382165784606e+017 + 2045718.1255181*i
+     derivada de ordem 22: f(2) = -9.2645562428967e+016 - 360577.76726008*i
+     derivada de ordem 23: f(2) = 2.350942447744e+017 + 251349.69747198*i
+     derivada de ordem 24: f(2) = -8.6136908726742e+016 - 166274.7365399*i
+     derivada de ordem 25: f(2) = 2.865034589405e+016 + 1132423.4438967*i
+     derivada de ordem 26: f(2) = -2.3107282019304e+015 - 36638.482031558*i
+     derivada de ordem 27: f(2) = -2.8504034402969e+015 - 1142102.6460697*i
+     derivada de ordem 28: f(2) = -1.0707944010859e+015 - 1286438.4610231*i
+     derivada de ordem 29: f(2) = -4.2756012712117e+014 - 1582948.0940025*i
+     derivada de ordem 30: f(2) = -1.7564744867573e+014 - 2665084.0499478*i
+]]
