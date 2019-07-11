@@ -34,11 +34,12 @@
 
 ]] --
 local floor = math.floor
-local Cor = require('Color')
+
+local Cor = require('scientifclib.Imagens.Color')
 local Image = {}
 Image.__index = Image
 
-Image.new = function(altura_px, largura_px,altura_cm,largura_cm, backgroundColor, tipoDecor)
+Image.new = function(altura_px, largura_px, altura_cm, largura_cm, backgroundColor, tipoDecor)
     local mat = {}
 
     for ii = 1, altura_px do
@@ -47,7 +48,7 @@ Image.new = function(altura_px, largura_px,altura_cm,largura_cm, backgroundColor
             mat[ii][jj] = backgroundColor
         end
     end
-    return setmetatable({ m = mat, sh = altura_px, sw = largura_px ,ddp=altura_px/altura_cm*largura_px/largura_cm, typeColor = tipoDecor or "UNDEFINED" }, Image)
+    return setmetatable({ m = mat, sh = altura_px, sw = largura_px, ddp = altura_px / altura_cm * largura_px / largura_cm, typeColor = tipoDecor or "UNDEFINED" }, Image)
 end
 Image.is_image = function(v)
     return getmetatable(v) == Image
@@ -60,35 +61,41 @@ end
 Image.pixel = function(t, i, j, cor)
     i = floor(i)
     j = floor(j)
-    t.m[i][j] = cor
+    if i > 1 and i <= t.sw and j > 1 and j <= t.sh then
+        t.m[i][j] = cor
+    end
 end
 local function saveasppm(t, name)
-    name = name .. '.ppm'
-    local file = io.open(name, 'w')
+name = name .. '.ppm'
+local file = io.open(name, 'w')
 
-    if file == nil then return "falha na abertura do arquivo" end
-    t.saved = name
-    file:write("P3\n" .. t.sw .. " " .. t.sh, ' 255\n')
-    for ii = 1, t.sh do
-        for jj = 1, t.sw do
-            if (t.m[ii][jj] == nil) then t.m[i][j] = { r = 0, g = 0, b = 0 } end
-            if (jj)%500==0 then file:write('\n') end
-            file:write(string.format('% 3d % 3d % 3d ',
-                t.m[ii][jj].r, t.m[ii][jj].g,
-                t.m[ii][jj].b))
-        end
-        file:write('\n')
-    end
-    file:close(file)
-    return "Sucesso"
+if file == nil then
+return "falha na abertura do arquivo"
+end
+t.saved = name
+file:write("P3\n" .. t.sw .. " " .. t.sh, ' 255\n')
+for ii = 1, t.sh do
+for jj = 1, t.sw do
+if (t.m[ii][jj] == nil) then
+t.m[i][j] = { r = 0, g = 0, b = 0 } end
+if (jj)%500==0 then file:write('\n')
+end
+file:write(string.format('% 3d % 3d % 3d ',
+t.m[ii][jj].r, t.m[ii][jj].g,
+t.m[ii][jj].b))
+end
+file:write('\n')
+end
+file:close(file)
+return "Sucesso"
 end
 
-Image.save = function(t, name, format)
+Image.save = function (t, name, format)
 
-    if format == "ppm" then
-        return saveasppm(t, name)
-    end
-    return "ERRO:formato desconhecido"
+if format == "ppm" then
+return saveasppm(t, name)
+end
+return "ERRO:formato desconhecido"
 end
 
 return Image
