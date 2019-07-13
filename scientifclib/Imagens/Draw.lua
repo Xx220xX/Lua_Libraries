@@ -7,6 +7,7 @@
 local Draw = {}
 local mathSci = require('scientifclib.MATH.mathSci')
 local floor = math.floor
+local round = mathSci.round
 local modulo = function(v) return v < 0 and -v or v end
 local function positiveOr0(m) return m < 0 and 0 or m end
 
@@ -96,10 +97,11 @@ Draw.FUNCTIONS = function(im, color, thickness, xi, xf, yi, yf, ...)
         end
     end
 end
-Draw.entorno = function(im,i,j,color,pix)
-    for ii = i-pix,i+pix do
-        for jj = j-pix,j+pix do
-            im:pixel(ii,jj,color)
+
+Draw.entorno = function(im, i, j, color, pix)
+    for ii = i - pix, i + pix do
+        for jj = j - pix, j + pix do
+            im:pixel(ii, jj, color)
         end
     end
 end
@@ -111,14 +113,43 @@ Draw.plot = function(im, color, thickness, FUNCTION, xi, xf, yi, yf)
         return
     end
     thickness = modulo(thickness)
-    local i,x,y;
-    for j = 1, im.sw do
-        x = mathSci.map(j,1,im.sw,xi,xf)
+    local i, j, x, y;
+
+    for jj = 1, im.sw, 0.1 do
+        x = mathSci.map(jj, 1, im.sw, xi, xf)
         y = FUNCTION(x)
-        i = floor(mathSci.map(-y,yi,yf,1,im.sh))
-        Draw.entorno(im,i,j,color,thickness);
+        j = round(jj)
+        i = round(mathSci.map(-y, yi, yf, 1, im.sh))
+        Draw.entorno(im, i, j, color, thickness);
     end
 end
+Draw.axis = function (im,cor,thickness,xi, xf, yi, yf)
+    local function x_axisP(x,y)
+        return math.abs(y)<0.2 and  x-math.floor(x) or 0/0
+    end
+    local function x_axis(x,y)
+        return x
+    end
+    local function y_axisP(x,y)
+        return math.abs(x) < 0.2 and y - math.floor(y) or 0/0
+    end
+    local function y_axis(x,y)
+        return y
+    end
+
+    Draw.FUNCTIONS(im,
+        cor,
+        thickness,
+        xi,
+        xf,
+        yi,
+        yf,
+        x_axis,
+        y_axis,
+        x_axisP,
+        y_axisP)
+end
+
 
 return Draw
 
